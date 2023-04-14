@@ -56,6 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_14_063412) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
+    t.string "content"
+    t.integer "rating"
+    t.bigint "movie_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_reviews_on_movie_id"
+  end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "username", default: "", null: false
