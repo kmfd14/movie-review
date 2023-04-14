@@ -1,0 +1,30 @@
+<h1>Movie List</h1>
+
+<table>
+  <thead>
+  <td>title</td>
+  <td>blurb</td>
+  <td>date released</td>
+  <td>country of origin</td>
+  <td>showing start</td>
+  <td>showing end</td>
+  <td>action</td>
+  </thead>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.blurb %></td>
+      <td><%= movie.date_released %></td>
+      <td><%= movie.country_origin %></td>
+      <td><%= movie.showing_start %></td>
+      <td><%= movie.showing_end %></td>
+      <td></td>
+      <td>
+        <%= link_to 'New', new_movie_path(movie) %>
+        <%= link_to 'Edit', edit_movie_path(movie) %>
+        <%= button_to 'Delete', movie_path(movie), method: :delete %>
+        <%= link_to 'Comments', movie_reviews_path(movie) %>
+      </td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,18 @@
+<%= form_with model: movies do |form| %>
+  <% if movies.errors.any? %>
+    <ul>
+      <% movies.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :blurb %>
+    <%= form.text_field :blurb %>
+  </div>
+  <%= form.submit %>
+<% end %>
