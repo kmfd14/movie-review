@@ -1,0 +1,10 @@
+<h1>Title <%= @movie.title %></h1>
+<h2>Reviews</h2>
+<ul>
+  <% @reviews.each do |review| %>
+    <li>
+      <%= review.content %>(<%= review.created_at %>)
+      <%= link_to 'Edit', edit_movie_review_path(@movie, review) %>
+    </li>
+  <% end %>
+</ul>
