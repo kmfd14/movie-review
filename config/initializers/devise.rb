@@ -17,7 +17,6 @@ Devise.setup do |config|
   # config.secret_key = '0eeadf599f59f6b51a1403e91239ad7416be4c125c356affe2e547b8b5c76c3c30ee45e8b11d35cf94a554e3395e8b49bf6707919c1b064b55034bc745a6256c'
   config.navigational_formats = ['*/*', :html, :turbo_stream]
 
-  config.authentication_keys = [:username]
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -48,7 +47,8 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [:email]
+  #config.authentication_keys = [:email]
+  config.authentication_keys = [:username]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -60,7 +60,8 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [:email]
+  #config.case_insensitive_keys = [:email]
+  config.authentication_keys = [:username]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
@@ -312,4 +313,5 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
 end
