@@ -22,17 +22,21 @@
 
   <div>
     <%= form.label :country_origin %>
-    <%= form.text_field :country_origin%>
+    <%= form.text_field :country_origin %>
   </div>
 
   <div>
     <%= form.label :showing_start %>
-    <%= form.date_select :showing_start%>
+    <%= form.date_select :showing_start %>
   </div>
 
   <div>
     <%= form.label :showing_end %>
-    <%= form.date_select :showing_end%>
+    <%= form.date_select :showing_end %>
+  </div>
+
+  <div>
+    <%= form.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
   </div>
 
   <%= form.submit %>
