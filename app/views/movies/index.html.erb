@@ -8,6 +8,7 @@
   <td>country of origin</td>
   <td>showing start</td>
   <td>showing end</td>
+  <td>genre</td>
   <td>action</td>
   </thead>
   <%= link_to 'New', new_movie_path %>
@@ -19,7 +20,7 @@
       <td><%= movie.country_origin %></td>
       <td><%= movie.showing_start %></td>
       <td><%= movie.showing_end %></td>
-      <td></td>
+      <td><%= movie.genres.pluck(:name).join(',') %></td>
       <td>
         <%= link_to 'Edit', edit_movie_path(movie) %>
         <%= button_to 'Delete', movie_path(movie), method: :delete %>

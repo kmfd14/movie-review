@@ -7,4 +7,6 @@ class Movie < ApplicationRecord
   validates :showing_end, presence: true
 
   has_many :reviews
+  has_many :movie_genre_ships
+  has_many :genres, through: :movie_genre_ships
 end

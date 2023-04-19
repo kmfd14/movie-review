@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
 
   def index
-    @movies = Movie.all
+    @movies = Movie.includes(:genres).all
   end
 
   def new
@@ -34,7 +34,6 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-    @movie = Movie.find(params[:id])
     @movie.destroy
     flash[:notice] = 'Movie destroyed successfully'
     redirect_to movies_path
@@ -47,6 +46,6 @@ class MoviesController < ApplicationController
   end
 
   def post_params
-    params.require(:movie).permit(:title, :blurb, :date_released, :country_origin,:showing_start, :showing_end)
+    params.require(:movie).permit(:title, :blurb, :date_released, :country_origin,:showing_start, :showing_end, genre_ids: [])
   end
 end
