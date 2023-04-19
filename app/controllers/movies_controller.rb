@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     @movie = Movie.new(post_params)
     if @movie.save
       flash[:notice] = 'Movie created successfully'
-      redirect_to posts_path
+      redirect_to movies_path
     else
       flash.now[:alert] = 'Movie create failed'
       render :new, status: :unprocessable_entity
@@ -24,9 +24,9 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params[:id])
-    if @movie.update(params.require(:post).permit(:title, :content))
+    if @movie.update(post_params)
       flash[:notice] = 'Movie updated successfully'
-      redirect_to posts_path
+      redirect_to movies_path
     else
       flash.now[:alert] = 'Movie update failed'
       render :edit, status: :unprocessable_entity
@@ -37,7 +37,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
     flash[:notice] = 'Movie destroyed successfully'
-    redirect_to posts_path
+    redirect_to movies_path
   end
 
   private
@@ -47,6 +47,6 @@ class MoviesController < ApplicationController
   end
 
   def post_params
-    params.require(:movie).permit(:title, :blurb)
+    params.require(:movie).permit(:title, :blurb, :date_released, :country_origin,:showing_start, :showing_end)
   end
 end
