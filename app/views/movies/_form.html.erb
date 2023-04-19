@@ -37,6 +37,8 @@
 
   <div>
     <%= form.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+    <%= form.select :genre_ids, Genre.all.map { |genre| [genre.name, genre.id]}, {},
+                    data: { placeholder: 'Please select moods' }, multiple: true,  class: 'select2 w-25' %>
   </div>
 
   <%= form.submit %>
