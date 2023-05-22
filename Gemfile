@@ -53,6 +53,7 @@ gem "bootsnap", require: false
 gem 'devise'
 gem 'rest-client'
 gem "bundler", ">= 2.0"
+gem 'mysql2'
 
 group :development, :test do
   gem 'faker'
