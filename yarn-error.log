@@ -1,21 +1,21 @@
 Arguments: 
-  /usr/bin/node /usr/local/bin/yarn add jquery
+  /home/kmfd14/.nvm/versions/node/v20.2.0/bin/node /home/kmfd14/.yarn/bin/yarn.js add jquery
 
 PATH: 
-  /home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/home/kmfd14/.rbenv/bin:/home/kmfd14/.asdf/shims:/home/kmfd14/.asdf/bin:/home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Ruby32-x64/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/Docker/host/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/bin:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/jre/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/KMFD/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/KMFD/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Users/KMFD/AppData/Roaming/npm:/mnt/c/Users/KMFD/Documents/bootcamp-projects/movie-review/node_modules/.bin:/snap/bin
+  /home/kmfd14/.nvm/versions/node/v20.2.0/bin:/home/kmfd14/.yarn/bin:/home/kmfd14/.config/yarn/global/node_modules/.bin:/home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/home/kmfd14/.rbenv/bin:/home/kmfd14/.asdf/shims:/home/kmfd14/.asdf/bin:/home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Ruby32-x64/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/Docker/host/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/bin:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/jre/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/KMFD/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/KMFD/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Users/KMFD/AppData/Roaming/npm:/mnt/c/Users/KMFD/Documents/bootcamp-projects/movie-review/node_modules/.bin:/snap/bin
 
 Yarn version: 
   1.22.19
 
 Node version: 
-  12.22.9
+  20.2.0
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+  Error: getaddrinfo EAI_AGAIN registry.npmjs.org
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
 
 npm manifest: 
   {
@@ -28,6 +28,7 @@ npm manifest:
       "bootstrap": "^5.2.3",
       "bootstrap-icons": "^1.10.4",
       "esbuild": "^0.17.16",
+      "jquery": "^3.7.0",
       "sass": "^1.62.0"
     },
     "scripts": {
@@ -302,6 +303,11 @@ Lockfile:
     version "7.0.0"
     resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
     integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
+  
+  jquery@^3.7.0:
+    version "3.7.0"
+    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.0.tgz#fe2c01a05da500709006d8790fe21c8a39d75612"
+    integrity sha512-umpJ0/k8X0MvD1ds0P9SfowREz2LenHsQaxSohMZ5OMNEU2r0tf8pdeEFTHMFxWVxKNyU9rTtK3CWzUCTKJUeQ==
   
   normalize-path@^3.0.0, normalize-path@~3.0.0:
     version "3.0.0"
