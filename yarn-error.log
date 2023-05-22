@@ -1,5 +1,5 @@
 Arguments: 
-  /home/kmfd14/.nvm/versions/node/v20.2.0/bin/node /home/kmfd14/.yarn/bin/yarn.js add jquery
+  /home/kmfd14/.nvm/versions/node/v20.2.0/bin/node /home/kmfd14/.yarn/bin/yarn.js install
 
 PATH: 
   /home/kmfd14/.nvm/versions/node/v20.2.0/bin:/home/kmfd14/.yarn/bin:/home/kmfd14/.config/yarn/global/node_modules/.bin:/home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/home/kmfd14/.rbenv/bin:/home/kmfd14/.asdf/shims:/home/kmfd14/.asdf/bin:/home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Ruby32-x64/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/Docker/host/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/bin:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/jre/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/KMFD/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/KMFD/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Users/KMFD/AppData/Roaming/npm:/mnt/c/Users/KMFD/Documents/bootcamp-projects/movie-review/node_modules/.bin:/snap/bin
@@ -14,8 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: getaddrinfo EAI_AGAIN registry.npmjs.org
-      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:118:26)
+  SyntaxError: /mnt/c/Users/KMFD/Documents/bootcamp-projects/movie-review/package.json: Expected double-quoted property name in JSON at position 256
+      at JSON.parse (<anonymous>)
+      at /home/kmfd14/.yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/home/kmfd14/.yarn/lib/cli.js:310:30)
+      at /home/kmfd14/.yarn/lib/cli.js:321:13
 
 npm manifest: 
   {
@@ -28,8 +32,13 @@ npm manifest:
       "bootstrap": "^5.2.3",
       "bootstrap-icons": "^1.10.4",
       "esbuild": "^0.17.16",
+  <<<<<<< HEAD
       "jquery": "^3.7.0",
       "sass": "^1.62.0"
+  =======
+      "sass": "^1.62.0",
+      "select2": "^4.1.0-rc.0"
+  >>>>>>> 048aa36f4423a189f850354d77227bd31a893460
     },
     "scripts": {
       "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
@@ -334,6 +343,11 @@ Lockfile:
       chokidar ">=3.0.0 <4.0.0"
       immutable "^4.0.0"
       source-map-js ">=0.6.2 <2.0.0"
+  
+  select2@^4.1.0-rc.0:
+    version "4.1.0-rc.0"
+    resolved "https://registry.yarnpkg.com/select2/-/select2-4.1.0-rc.0.tgz#ba3cd3901dda0155e1c0219ab41b74ba51ea22d8"
+    integrity sha512-Hr9TdhyHCZUtwznEH2CBf7967mEM0idtJ5nMtjvk3Up5tPukOLXbHUNmh10oRfeNIhj+3GD3niu+g6sVK+gK0A==
   
   "source-map-js@>=0.6.2 <2.0.0":
     version "1.0.2"
