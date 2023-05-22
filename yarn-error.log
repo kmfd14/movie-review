@@ -1,20 +1,21 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+  /usr/bin/node /usr/local/bin/yarn add jquery
 
 PATH: 
-  /usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  /home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/home/kmfd14/.rbenv/bin:/home/kmfd14/.asdf/shims:/home/kmfd14/.asdf/bin:/home/kmfd14/.rbenv/shims:/home/kmfd14/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Ruby32-x64/bin:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/MATLAB/R2022b/bin:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/Docker/host/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/bin:/mnt/c/Program Files/RedHat/java-1.8.0-openjdk-1.8.0.372-1/jre/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Users/KMFD/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/KMFD/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Users/KMFD/AppData/Roaming/npm:/mnt/c/Users/KMFD/Documents/bootcamp-projects/movie-review/node_modules/.bin:/snap/bin
 
 Yarn version: 
   1.22.19
 
 Node version: 
-  18.15.0
+  12.22.9
 
 Platform: 
   linux x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, open '/usr/local/share/.cache/yarn/v6/npm-@esbuild-win32-x64-0.17.16-260f19b0a3300d22c3a3f52722c671dc561edaa3-integrity/node_modules/@esbuild/win32-x64/.yarn-metadata.json'
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
 
 npm manifest: 
   {
@@ -22,6 +23,7 @@ npm manifest:
     "private": "true",
     "dependencies": {
       "@hotwired/stimulus": "^3.2.1",
+      "@hotwired/turbo-rails": "^7.3.0",
       "@popperjs/core": "^2.11.7",
       "bootstrap": "^5.2.3",
       "bootstrap-icons": "^1.10.4",
@@ -157,10 +159,28 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.2.1.tgz#e3de23623b0c52c247aba4cd5d530d257008676b"
     integrity sha512-HGlzDcf9vv/EQrMJ5ZG6VWNs8Z/xMN+1o2OhV1gKiSG6CqZt5MCBB1gRg5ILiN3U0jEAxuDTNPRfBcnZBDmupQ==
   
+  "@hotwired/turbo-rails@^7.3.0":
+    version "7.3.0"
+    resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.3.0.tgz#422c21752509f3edcd6c7b2725bbe9e157815f51"
+    integrity sha512-fvhO64vp/a2UVQ3jue9WTc2JisMv9XilIC7ViZmXAREVwiQ2S4UC7Go8f9A1j4Xu7DBI6SbFdqILk5ImqVoqyA==
+    dependencies:
+      "@hotwired/turbo" "^7.3.0"
+      "@rails/actioncable" "^7.0"
+  
+  "@hotwired/turbo@^7.3.0":
+    version "7.3.0"
+    resolved "https://registry.yarnpkg.com/@hotwired/turbo/-/turbo-7.3.0.tgz#2226000fff1aabda9fd9587474565c9929dbf15d"
+    integrity sha512-Dcu+NaSvHLT7EjrDrkEmH4qET2ZJZ5IcCWmNXxNQTBwlnE5tBZfN6WxZ842n5cHV52DH/AKNirbPBtcEXDLW4g==
+  
   "@popperjs/core@^2.11.7":
     version "2.11.7"
     resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.7.tgz#ccab5c8f7dc557a52ca3288c10075c9ccd37fff7"
     integrity sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==
+  
+  "@rails/actioncable@^7.0":
+    version "7.0.4"
+    resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.4.tgz#70a3ca56809f7aaabb80af2f9c01ae51e1a8ed41"
+    integrity sha512-tz4oM+Zn9CYsvtyicsa/AwzKZKL+ITHWkhiu7x+xF77clh2b4Rm+s6xnOgY/sGDWoFWZmtKsE95hxBPkgQQNnQ==
   
   anymatch@~3.1.2:
     version "3.1.3"
