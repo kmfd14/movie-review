@@ -1,5 +1,6 @@
 <h1>Title <%= @movie.title %></h1>
 <h2>Reviews</h2>
+<%= link_to 'New Review', new_movie_review_path(@movie) %>
 <ul>
   <% @reviews.each do |review| %>
     <li>

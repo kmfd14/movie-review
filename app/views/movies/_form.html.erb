@@ -1,7 +1,7 @@
-<%= form_with model: movies do |form| %>
-  <% if movies.errors.any? %>
+<%= form_with model: movie do |form| %>
+  <% if movie.errors.any? %>
     <ul>
-      <% movies.errors.each do |error| %>
+      <% movie.errors.each do |error| %>
         <li><%= error.full_message %></li>
       <% end %>
     </ul>
@@ -14,5 +14,31 @@
     <%= form.label :blurb %>
     <%= form.text_field :blurb %>
   </div>
+
+  <div>
+    <%= form.label :date_released %>
+    <%= form.date_select :date_released %>
+  </div>
+
+  <div>
+    <%= form.label :country_origin %>
+    <%= form.text_field :country_origin %>
+  </div>
+
+  <div>
+    <%= form.label :showing_start %>
+    <%= form.date_select :showing_start %>
+  </div>
+
+  <div>
+    <%= form.label :showing_end %>
+    <%= form.date_select :showing_end %>
+  </div>
+
+  <div>
+    <%= form.select :genre_ids, Genre.all.map { |genre| [genre.name, genre.id]}, {},
+                    data: { placeholder: 'Please select genres' }, multiple: true,  class: 'select2-drop-mask   w-25' %>
+  </div>
+
   <%= form.submit %>
 <% end %>
