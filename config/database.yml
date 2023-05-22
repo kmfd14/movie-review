@@ -15,7 +15,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: qwer4321
-  host: db
+  host: mysql://azsaxreoxboksvnn:sr704yv8pn46l7kl@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/lr3yfvjfioa25h4h
 
 development:
   <<: *default
